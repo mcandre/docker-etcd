@@ -9,11 +9,8 @@ https://registry.hub.docker.com/u/mcandre/docker-etcd/
 ```
 $ make
 docker build -t mcandre/docker-etcd .
-docker exec fe0679cad6e990333c7f095db18466ddf4963a119c9acb6faad8bdc29f1f0e7b psql -h $(boot2docker ip) -U etcd -c "SELECT 'Hello World!';"
-   ?column?   
---------------
- Hello World!
-(1 row)
+curl -L http://$(boot2docker ip):4001/v2/keys/; echo ''
+{"action":"get","node":{"key":"/","dir":true}}
 ```
 
 # REQUIREMENTS
