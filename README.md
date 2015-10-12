@@ -9,7 +9,7 @@ https://registry.hub.docker.com/u/mcandre/docker-etcd/
 ```
 $ make
 docker build -t mcandre/docker-etcd .
-curl -L http://$(boot2docker ip):4001/v2/keys/; echo ''
+curl -L http://$(docker-machine ip default):4001/v2/keys/; echo ''
 {"action":"get","node":{"key":"/","dir":true}}
 ```
 
@@ -37,8 +37,7 @@ $ sudo yum install docker-io curl
 ## non-Linux
 
 * [VirtualBox](https://www.virtualbox.org/)
-* [Vagrant](https://www.vagrantup.com/)
-* [boot2docker](http://boot2docker.io/)
+* [Docker Toolbox](https://www.docker.com/toolbox)
 
 ### Mac OS X
 
@@ -47,8 +46,7 @@ $ sudo yum install docker-io curl
 * [brew-cask](http://caskroom.io/)
 
 ```
-$ brew cask install virtualbox vagrant
-$ brew install boot2docker curl
+$ brew cask install dockertoolbox
 ```
 
 ### Windows
@@ -56,5 +54,7 @@ $ brew install boot2docker curl
 * [Chocolatey](https://chocolatey.org/)
 
 ```
-> chocolatey install docker make curl
+> chocolatey install virtualbox make
 ```
+
+* [DockerToolbox-1.8.2c.exe](https://github.com/docker/toolbox/releases/download/v1.8.2c/DockerToolbox-1.8.2c.exe)
