@@ -21,6 +21,7 @@ curl -L http://$(docker-machine ip default):4001/v2/keys/; echo ''
 ## Optional
 
 * [make](http://www.gnu.org/software/make/)
+* [Node.js](https://nodejs.org/en/) (for dockerlint)
 
 ## Debian/Ubuntu
 
